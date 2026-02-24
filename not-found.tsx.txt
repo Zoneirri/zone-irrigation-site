@@ -1,0 +1,13 @@
+import Link from 'next/link';
+
+export default function NotFound() {
+  return (
+    <div style={{ textAlign: 'center', padding: '50px' }}>
+      <h1>Oops! This pipe leads nowhere.</h1>
+      <p>We couldn't find the page you're looking for.</p>
+      <Link href="/" style={{ color: 'blue', textDecoration: 'underline' }}>
+        Return to Zone Irrigation Home
+      </Link>
+    </div>
+  );
+}
