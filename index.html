@@ -123,32 +123,63 @@
         </div>
     </section>
 
-    <section id="contact" class="py-24 px-6 relative bg-white">
-        <div class="max-w-5xl mx-auto bg-white rounded-[3rem] shadow-2xl border border-slate-100 overflow-hidden flex flex-col md:flex-row">
-            <div class="bg-blue-600 p-12 text-white md:w-2/5 flex flex-col justify-center">
-                <h2 class="text-4xl font-extrabold mb-6 leading-tight">Ready for a Better Lawn?</h2>
-                <div class="space-y-4">
-                    <p class="flex items-center gap-4 text-xl font-bold">📍 <span>Milk River, AB</span></p>
-                    <p class="flex items-center gap-4 text-xl font-bold">📞 <span>(403) 647-7649</span></p>
-                </div>
+<section id="request-info" class="py-24 px-6 bg-slate-50 border-t border-slate-200">
+        <div class="max-w-4xl mx-auto">
+            <div class="text-center mb-12">
+                <h2 class="text-4xl font-extrabold text-slate-900 mb-4">Request Project Info</h2>
+                <p class="text-lg text-slate-600">Tell us about your property and we'll get back to you with a custom estimate.</p>
             </div>
-            <div class="p-12 md:w-3/5">
-                <form action="https://formspree.io/f/mnjblzlw" method="POST" class="space-y-6">
+
+            <div class="bg-white rounded-[3rem] shadow-xl border border-slate-100 p-8 md:p-12">
+                <form action="https://formspree.io/f/mnjblzlw" method="POST" class="space-y-8">
                     <input type="hidden" name="_next" value="https://zoneirri.ca">
+                    
                     <div class="grid md:grid-cols-2 gap-6">
-                        <input type="text" name="name" placeholder="Full Name" required class="w-full p-4 bg-slate-50 border-0 rounded-2xl focus:ring-2 focus:ring-blue-500 transition">
-                        <input type="tel" name="phone" placeholder="Phone Number" required class="w-full p-4 bg-slate-50 border-0 rounded-2xl focus:ring-2 focus:ring-blue-500 transition">
+                        <div class="space-y-2">
+                            <label class="text-sm font-bold text-slate-700 ml-2">Full Name</label>
+                            <input type="text" name="name" required class="w-full p-4 bg-slate-50 border-0 rounded-2xl focus:ring-2 focus:ring-blue-500 transition">
+                        </div>
+                        <div class="space-y-2">
+                            <label class="text-sm font-bold text-slate-700 ml-2">Phone Number</label>
+                            <input type="tel" name="phone" required class="w-full p-4 bg-slate-50 border-0 rounded-2xl focus:ring-2 focus:ring-blue-500 transition">
+                        </div>
                     </div>
-                    <select name="service" class="w-full p-4 bg-slate-50 border-0 rounded-2xl focus:ring-2 focus:ring-blue-500 transition">
-                        <option>New System Installation</option>
-                        <option>Smart Wi-Fi Controller Upgrade</option>
-                        <option>Acreage / Large Property Service</option>
-                        <option>Spring Start-up</option>
-                        <option>System Repair</option>
-                        <option>Fall Blow-out</option>
-                    </select>
-                    <textarea name="message" rows="4" placeholder="Tell us about your project..." required class="w-full p-4 bg-slate-50 border-0 rounded-2xl focus:ring-2 focus:ring-blue-500 transition"></textarea>
-                    <button type="submit" class="w-full bg-slate-900 text-white font-extrabold py-5 rounded-2xl hover:bg-blue-600 transition-all shadow-xl">Submit Request</button>
+
+                    <div class="space-y-2">
+                        <label class="text-sm font-bold text-slate-700 ml-2">Property Address or Nearest Town</label>
+                        <input type="text" name="address" placeholder="e.g. 123 Main St, Milk River" required class="w-full p-4 bg-slate-50 border-0 rounded-2xl focus:ring-2 focus:ring-blue-500 transition">
+                    </div>
+
+                    <div class="grid md:grid-cols-2 gap-6">
+                        <div class="space-y-2">
+                            <label class="text-sm font-bold text-slate-700 ml-2">Project Type</label>
+                            <select name="project_type" class="w-full p-4 bg-slate-50 border-0 rounded-2xl focus:ring-2 focus:ring-blue-500 transition">
+                                <option>New Residential Install</option>
+                                <option>Acreage / Estate System</option>
+                                <option>Smart Controller Upgrade</option>
+                                <option>System Repair / Troubleshooting</option>
+                                <option>Spring Start-up</option>
+                            </select>
+                        </div>
+                        <div class="space-y-2">
+                            <label class="text-sm font-bold text-slate-700 ml-2">When do you need this done?</label>
+                            <select name="timeline" class="w-full p-4 bg-slate-50 border-0 rounded-2xl focus:ring-2 focus:ring-blue-500 transition">
+                                <option>ASAP (Urgent Repair)</option>
+                                <option>Within 2 weeks</option>
+                                <option>This Season</option>
+                                <option>Next Spring (2027)</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <div class="space-y-2">
+                        <label class="text-sm font-bold text-slate-700 ml-2">Additional Details</label>
+                        <textarea name="message" rows="4" placeholder="Any specific issues or yard sizes?" required class="w-full p-4 bg-slate-50 border-0 rounded-2xl focus:ring-2 focus:ring-blue-500 transition"></textarea>
+                    </div>
+
+                    <button type="submit" class="w-full bg-blue-600 text-white font-extrabold py-5 rounded-2xl hover:bg-slate-900 transition-all shadow-xl text-lg">
+                        Submit Information Request
+                    </button>
                 </form>
             </div>
         </div>
@@ -166,3 +197,4 @@
 
 </body>
 </html>
+
