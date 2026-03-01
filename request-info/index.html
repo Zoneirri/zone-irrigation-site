@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Request Info | Zone Irrigation</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;700;800&display=swap');
+        body { font-family: 'Plus Jakarta Sans', sans-serif; }
+        .hero-mesh { background-color: #0f172a; background-image: radial-gradient(at 0% 0%, hsla(210,100%,20%,1) 0, transparent 50%); }
+    </style>
+</head>
+<body class="bg-slate-50 text-slate-900">
+
+    <nav class="sticky top-0 z-50 bg-white/80 backdrop-blur-md border-b border-slate-200 p-4">
+        <div class="max-w-6xl mx-auto flex justify-between items-center">
+            <a href="/" class="flex items-center">
+                <img src="../logo.png" alt="Zone Irrigation" class="h-10 w-auto">
+            </a>
+            <a href="tel:4036477649" class="text-blue-600 font-extrabold">(403) 647-7649</a>
+        </div>
+    </nav>
+
+    <header class="hero-mesh text-white py-16 px-6 text-center">
+        <h1 class="text-4xl md:text-5xl font-extrabold mb-4 tracking-tight">Request Project Information</h1>
+        <p class="text-slate-300 max-w-2xl mx-auto">Tell us about your property in Southern Alberta and we'll get back to you with a custom estimate.</p>
+    </header>
+
+    <section class="py-12 px-6 -mt-10">
+        <div class="max-w-3xl mx-auto bg-white rounded-[2.5rem] shadow-2xl border border-slate-100 p-8 md:p-12">
+            <form action="https://formspree.io/f/mnjblzlw" method="POST" class="space-y-6">
+                <input type="hidden" name="_next" value="https://zoneirri.ca/request-info">
+                
+                <div class="grid md:grid-cols-2 gap-6">
+                    <div class="space-y-2">
+                        <label class="text-sm font-bold text-slate-700 ml-1">Full Name</label>
+                        <input type="text" name="name" required class="w-full p-4 bg-slate-50 border-0 rounded-2xl focus:ring-2 focus:ring-blue-500 transition">
+                    </div>
+                    <div class="space-y-2">
+                        <label class="text-sm font-bold text-slate-700 ml-1">Phone Number</label>
+                        <input type="tel" name="phone" required class="w-full p-4 bg-slate-50 border-0 rounded-2xl focus:ring-2 focus:ring-blue-500 transition">
+                    </div>
+                </div>
+
+                <div class="space-y-2">
+                    <label class="text-sm font-bold text-slate-700 ml-1">Property Address or Town</label>
+                    <input type="text" name="address" placeholder="e.g. Milk River, AB" required class="w-full p-4 bg-slate-50 border-0 rounded-2xl focus:ring-2 focus:ring-blue-500 transition">
+                </div>
+
+                <div class="grid md:grid-cols-2 gap-6">
+                    <div class="space-y-2">
+                        <label class="text-sm font-bold text-slate-700 ml-1">Service Required</label>
+                        <select name="service" class="w-full p-4 bg-slate-50 border-0 rounded-2xl focus:ring-2 focus:ring-blue-500 transition">
+                            <option>New System Installation</option>
+                            <option>Smart Wi-Fi Upgrade</option>
+                            <option>Acreage Specialty Service</option>
+                            <option>Spring Start-up / Fall Blow-out</option>
+                            <option>General Repair</option>
+                        </select>
+                    </div>
+                    <div class="space-y-2">
+                        <label class="text-sm font-bold text-slate-700 ml-1">Preferred Timeline</label>
+                        <select name="timeline" class="w-full p-4 bg-slate-50 border-0 rounded-2xl focus:ring-2 focus:ring-blue-500 transition">
+                            <option>As soon as possible</option>
+                            <option>Within the month</option>
+                            <option>Later this season</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="space-y-2">
+                    <label class="text-sm font-bold text-slate-700 ml-1">Additional Project Details</label>
+                    <textarea name="message" rows="4" placeholder="Any specific issues or yard size details?" required class="w-full p-4 bg-slate-50 border-0 rounded-2xl focus:ring-2 focus:ring-blue-500 transition"></textarea>
+                </div>
+
+                <button type="submit" class="w-full bg-blue-600 text-white font-extrabold py-5 rounded-2xl hover:bg-slate-900 transition-all shadow-xl text-lg">
+                    Submit Request
+                </button>
+            </form>
+        </div>
+    </section>
+
+    <footer class="py-12 text-center text-slate-400 text-sm">
+        <a href="/" class="hover:text-blue-600 transition-colors">← Return to Home</a>
+        <p class="mt-4">© 2026 Zone Irrigation. Locally Owned & Operated.</p>
+    </footer>
+
+</body>
+</html>
