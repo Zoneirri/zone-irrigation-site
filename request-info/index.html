@@ -1,59 +1,125 @@
-<div class="max-w-3xl mx-auto bg-white rounded-[2.5rem] shadow-2xl p-8 md:p-12 border border-slate-100">
-    <h1 class="text-3xl font-extrabold text-slate-900 mb-2">Request Info or a Quote</h1>
-    <p class="text-slate-500 mb-8 leading-relaxed">
-        Have a question or need an estimate? Tell us about your property and we'll get back to you within 24 hours.
-    </p>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Request Info or a Quote | Zone Irrigation</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;700;800&display=swap');
+        body { font-family: 'Plus Jakarta Sans', sans-serif; }
+    </style>
+</head>
+<body class="bg-slate-50 min-h-screen flex flex-col">
 
-    <form id="contact-form" action="https://formspree.io/f/mnjblzlw" method="POST" class="space-y-6">
-        <div class="grid md:grid-cols-2 gap-6">
-            <div class="space-y-2">
-                <label class="text-sm font-bold text-slate-700 ml-1">Full Name</label>
-                <input type="text" name="name" required class="w-full p-4 bg-slate-50 rounded-2xl border-0 focus:ring-2 focus:ring-blue-500">
-            </div>
-            <div class="space-y-2">
-                <label class="text-sm font-bold text-slate-700 ml-1">Phone Number</label>
-                <input type="tel" name="phone" required class="w-full p-4 bg-slate-50 rounded-2xl border-0 focus:ring-2 focus:ring-blue-500">
-            </div>
+    <nav class="p-4 bg-white border-b sticky top-0 z-50">
+        <div class="max-w-6xl mx-auto flex justify-between items-center">
+            <a href="/" class="font-extrabold text-blue-600 tracking-tighter text-xl">ZONE IRRIGATION</a>
+            <a href="tel:4036477649" class="text-slate-900 font-bold text-sm md:text-base">(403) 647-7649</a>
         </div>
+    </nav>
 
-        <div class="space-y-3 bg-slate-50 p-6 rounded-2xl border border-slate-100">
-            <label class="text-sm font-bold text-slate-700 block">How should we reach out?</label>
-            <div class="flex gap-6">
-                <label class="flex items-center gap-2 cursor-pointer group">
-                    <input type="radio" name="contact_preference" value="Text Message" checked class="w-5 h-5 text-blue-600 border-slate-300 focus:ring-blue-500">
-                    <span class="text-slate-700 font-medium group-hover:text-blue-600 transition">Text Message</span>
-                </label>
-                <label class="flex items-center gap-2 cursor-pointer group">
-                    <input type="radio" name="contact_preference" value="Phone Call" class="w-5 h-5 text-blue-600 border-slate-300 focus:ring-blue-500">
-                    <span class="text-slate-700 font-medium group-hover:text-blue-600 transition">Phone Call</span>
-                </label>
-            </div>
-        </div>
+    <section class="py-12 px-6 flex-grow">
+        <div class="max-w-3xl mx-auto bg-white rounded-[2.5rem] shadow-2xl p-8 md:p-12 border border-slate-100">
+            
+            <header class="mb-10">
+                <h1 class="text-3xl font-extrabold text-slate-900 mb-2 tracking-tight">Request Info or a Quote</h1>
+                <p class="text-slate-500 leading-relaxed">
+                    Have a question or need an estimate? Tell us about your property and we'll get back to you within 24 hours.
+                </p>
+            </header>
 
-        <div class="space-y-2">
-            <label class="text-sm font-bold text-slate-700 ml-1">Property Address or Town</label>
-            <input type="text" name="address" placeholder="e.g. Milk River, AB" required class="w-full p-4 bg-slate-50 rounded-2xl border-0 focus:ring-2 focus:ring-blue-500">
-        </div>
+            <form id="contact-form" action="https://formspree.io/f/mnjblzlw" method="POST" class="space-y-6">
+                
+                <div class="grid md:grid-cols-2 gap-6">
+                    <div class="space-y-2">
+                        <label class="text-sm font-bold text-slate-700 ml-1">Full Name</label>
+                        <input type="text" name="name" required placeholder="John Doe" class="w-full p-4 bg-slate-50 rounded-2xl border-0 focus:ring-2 focus:ring-blue-500 transition">
+                    </div>
+                    <div class="space-y-2">
+                        <label class="text-sm font-bold text-slate-700 ml-1">Phone Number</label>
+                        <input type="tel" name="phone" required placeholder="(403) 555-0123" class="w-full p-4 bg-slate-50 rounded-2xl border-0 focus:ring-2 focus:ring-blue-500 transition">
+                    </div>
+                </div>
 
-        <div class="space-y-2">
-            <label class="text-sm font-bold text-slate-700 ml-1">Service Required</label>
-            <select name="service" class="w-full p-4 bg-slate-50 rounded-2xl border-0 focus:ring-2 focus:ring-blue-500">
-                <option>New Installation</option>
-                <option>Smart Wi-Fi Upgrade</option>
-                <option>Spring Start-up</option>
-                <option>System Repair</option>
-                <option>Fall Blow-out</option>
-                <option>General Question / Other</option>
-            </select>
-        </div>
+                <div class="space-y-3 bg-blue-50/50 p-6 rounded-2xl border border-blue-100">
+                    <label class="text-sm font-bold text-blue-900 block">How should we reach out?</label>
+                    <div class="flex gap-8">
+                        <label class="flex items-center gap-3 cursor-pointer group">
+                            <input type="radio" name="contact_preference" value="Text Message" checked class="w-5 h-5 text-blue-600 border-slate-300 focus:ring-blue-500">
+                            <span class="text-slate-700 font-bold group-hover:text-blue-600 transition">Text Message</span>
+                        </label>
+                        <label class="flex items-center gap-3 cursor-pointer group">
+                            <input type="radio" name="contact_preference" value="Phone Call" class="w-5 h-5 text-blue-600 border-slate-300 focus:ring-blue-500">
+                            <span class="text-slate-700 font-bold group-hover:text-blue-600 transition">Phone Call</span>
+                        </label>
+                    </div>
+                </div>
 
-        <div class="space-y-2">
-            <label class="text-sm font-bold text-slate-700 ml-1">Details or Questions</label>
-            <textarea name="message" rows="4" placeholder="Tell us more about your yard or ask a question..." required class="w-full p-4 bg-slate-50 rounded-2xl border-0 focus:ring-2 focus:ring-blue-500"></textarea>
+                <div class="space-y-2">
+                    <label class="text-sm font-bold text-slate-700 ml-1">Property Address or Town</label>
+                    <input type="text" name="address" placeholder="e.g. Milk River, AB" required class="w-full p-4 bg-slate-50 rounded-2xl border-0 focus:ring-2 focus:ring-blue-500 transition">
+                </div>
+
+                <div class="space-y-2">
+                    <label class="text-sm font-bold text-slate-700 ml-1">Service Required</label>
+                    <select name="service" class="w-full p-4 bg-slate-50 rounded-2xl border-0 focus:ring-2 focus:ring-blue-500 transition cursor-pointer">
+                        <option>New Installation</option>
+                        <option>Smart Wi-Fi Upgrade</option>
+                        <option>Spring Start-up</option>
+                        <option>System Repair</option>
+                        <option>Fall Blow-out</option>
+                        <option>General Question / Other</option>
+                    </select>
+                </div>
+
+                <div class="space-y-2">
+                    <label class="text-sm font-bold text-slate-700 ml-1">Details or Questions</label>
+                    <textarea name="message" rows="4" placeholder="Tell us more about your yard or ask a question..." required class="w-full p-4 bg-slate-50 rounded-2xl border-0 focus:ring-2 focus:ring-blue-500 transition"></textarea>
+                </div>
+                
+                <button type="submit" id="submit-btn" class="w-full bg-blue-600 text-white font-extrabold py-5 rounded-2xl hover:bg-slate-900 transition-all shadow-xl text-lg mt-4">
+                    Submit Request
+                </button>
+            </form>
         </div>
-        
-        <button type="submit" id="submit-btn" class="w-full bg-blue-600 text-white font-extrabold py-5 rounded-2xl hover:bg-slate-900 transition-all shadow-xl text-lg">
-            Submit Request
-        </button>
-    </form>
-</div>
+    </section>
+
+    <footer class="py-12 text-center text-slate-400 text-sm">
+        <a href="/" class="hover:text-blue-600 tracking-widest font-bold uppercase transition">← Back to Home</a>
+    </footer>
+
+    <script>
+        const form = document.getElementById("contact-form");
+        const btn = document.getElementById("submit-btn");
+
+        form.addEventListener("submit", async function(event) {
+            event.preventDefault();
+            btn.innerText = "Sending...";
+            btn.disabled = true;
+
+            const data = new FormData(event.target);
+            
+            fetch(event.target.action, {
+                method: 'POST',
+                body: data,
+                headers: { 'Accept': 'application/json' }
+            }).then(response => {
+                if (response.ok) {
+                    // Success redirect to your custom page
+                    window.location.href = "https://zoneirri.ca/request-info/success.html";
+                } else {
+                    alert("Something went wrong. Please call us at (403) 647-7649");
+                    btn.innerText = "Submit Request";
+                    btn.disabled = false;
+                }
+            }).catch(error => {
+                alert("Connection error. Please check your signal and try again.");
+                btn.innerText = "Submit Request";
+                btn.disabled = false;
+            });
+        });
+    </script>
+
+</body>
+</html>
