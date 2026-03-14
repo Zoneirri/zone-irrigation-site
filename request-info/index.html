@@ -99,37 +99,7 @@
     <a href="/privacy.html" class="hover:text-blue-600 underline mx-2">Privacy Policy</a>
 </footer>
 
-    <script>
-        const form = document.getElementById("contact-form");
-        const btn = document.getElementById("submit-btn");
-
-        form.addEventListener("submit", async function(event) {
-            event.preventDefault();
-            btn.innerText = "Sending...";
-            btn.disabled = true;
-
-            const data = new FormData(event.target);
-            
-            fetch(event.target.action, {
-                method: 'POST',
-                body: data,
-                headers: { 'Accept': 'application/json' }
-            }).then(response => {
-                if (response.ok) {
-                    // Success redirect to your custom page
-                    window.location.href = "https://zoneirri.ca/request-info/success.html";
-                } else {
-                    alert("Something went wrong. Please call us at (403) 647-7649");
-                    btn.innerText = "Submit Request";
-                    btn.disabled = false;
-                }
-            }).catch(error => {
-                alert("Connection error. Please check your signal and try again.");
-                btn.innerText = "Submit Request";
-                btn.disabled = false;
-            });
-        });
-    </script>
+<form action="https://formspree.io/f/mnjblzlw" method="POST" class="space-y-6">
 
 </body>
 </html>
