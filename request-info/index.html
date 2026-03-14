@@ -30,7 +30,8 @@
             </header>
 
 <form id="contact-form" action="https://formspree.io/f/mnjblzlw" method="POST" class="space-y-6">
-    
+
+    <input type="hidden" name="_next" value="https://zoneirri.ca/request-info/success.html">    
     <input type="hidden" name="_replyto" value="%email%">
 
     <div class="grid md:grid-cols-3 gap-6">
@@ -100,29 +101,45 @@
 </footer>
 
 <script>
-    const form = document.getElementById("contact-form");
-    const btn = document.getElementById("submit-btn");
+    var form = document.getElementById("contact-form");
+    
+    async function handleSubmit(event) {
+      event.preventDefault();
+      var status = document.getElementById("submit-btn");
+      var data = new FormData(event.target);
+      
+      status.innerText = "Sending...";
+      status.disabled = true;
 
-    form.addEventListener("submit", function(event) {
-        event.preventDefault();
-        btn.innerText = "Sending...";
-        btn.disabled = true;
-
-        const data = new FormData(form);
-        
-        fetch(form.action, {
-            method: 'POST',
-            body: data,
-            headers: { 'Accept': 'application/json' }
-        }).then(response => {
-            // If Formspree gets the data, we go to success.html immediately
-            window.location.href = "/request-info/success.html";
-        }).catch(error => {
-            // If it fails, we still try to go to success.html to ensure the lead didn't get lost
-            window.location.href = "/request-info/success.html";
-        });
-    });
+      fetch(event.target.action, {
+        method: form.method,
+        body: data,
+        headers: {
+            'Accept': 'application/json'
+        }
+      }).then(response => {
+        if (response.ok) {
+          // THIS IS THE KEY: It only redirects if the send actually worked!
+          window.location.href = "/request-info/success.html";
+        } else {
+          response.json().then(data => {
+            if (Object.hasOwn(data, 'errors')) {
+              alert(data["errors"].map(error => error["message"]).join(", "));
+            } else {
+              alert("Oops! There was a problem. Please call Don at (403) 647-7649");
+            }
+            status.innerText = "Submit Request";
+            status.disabled = false;
+          })
+        }
+      }).catch(error => {
+        alert("Connection error. Please check your signal and try again.");
+        status.innerText = "Submit Request";
+        status.disabled = false;
+      });
+    }
+    form.addEventListener("submit", handleSubmit)
 </script>
-
+    
 </body>
 </html>
