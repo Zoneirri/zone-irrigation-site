@@ -1,13 +1,28 @@
-import Link from 'next/link';
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>404 - Page Not Found | Zone Irrigation</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@700;800&display=swap');
+        body { font-family: 'Plus Jakarta Sans', sans-serif; }
+    </style>
+</head>
+<body class="bg-slate-50 min-h-screen flex items-center justify-center p-6 text-center">
 
-export default function NotFound() {
-  return (
-    <div style={{ textAlign: 'center', padding: '50px' }}>
-      <h1>Oops! This pipe leads nowhere.</h1>
-      <p>We couldn't find the page you're looking for.</p>
-      <Link href="/" style={{ color: 'blue', textDecoration: 'underline' }}>
-        Return to Zone Irrigation Home
-      </Link>
+    <div class="max-w-md w-full bg-white p-12 rounded-[3rem] shadow-2xl border border-slate-100">
+        <div class="text-6xl mb-6">🚰</div>
+        <h1 class="text-3xl font-extrabold text-slate-900 mb-4 tracking-tight">Oops! This pipe leads nowhere.</h1>
+        <p class="text-slate-500 mb-8 leading-relaxed">
+            We couldn't find the page you're looking for. Let's get you back to the main line.
+        </p>
+        
+        <a href="/" class="block w-full bg-blue-600 text-white font-extrabold py-4 rounded-2xl hover:bg-slate-900 transition-all shadow-lg">
+            Return to Home
+        </a>
     </div>
-  );
-}
+
+</body>
+</html>
