@@ -29,60 +29,65 @@
                 </p>
             </header>
 
-            <form id="contact-form" action="https://formspree.io/f/mnjblzlw" method="POST" class="space-y-6">
-                
-                <div class="grid md:grid-cols-2 gap-6">
-                    <div class="space-y-2">
-                        <label class="text-sm font-bold text-slate-700 ml-1">Full Name</label>
-                        <input type="text" name="name" required placeholder="John Doe" class="w-full p-4 bg-slate-50 rounded-2xl border-0 focus:ring-2 focus:ring-blue-500 transition">
-                    </div>
-                    <div class="space-y-2">
-                        <label class="text-sm font-bold text-slate-700 ml-1">Phone Number</label>
-                        <input type="tel" name="phone" required placeholder="(403) 555-0123" class="w-full p-4 bg-slate-50 rounded-2xl border-0 focus:ring-2 focus:ring-blue-500 transition">
-                    </div>
-                </div>
+<form id="contact-form" action="https://formspree.io/f/mnjblzlw" method="POST" class="space-y-6">
+    
+    <input type="hidden" name="_replyto" value="%email%">
 
-                <div class="space-y-3 bg-blue-50/50 p-6 rounded-2xl border border-blue-100">
-                    <label class="text-sm font-bold text-blue-900 block">How should we reach out?</label>
-                    <div class="flex gap-8">
-                        <label class="flex items-center gap-3 cursor-pointer group">
-                            <input type="radio" name="contact_preference" value="Text Message" checked class="w-5 h-5 text-blue-600 border-slate-300 focus:ring-blue-500">
-                            <span class="text-slate-700 font-bold group-hover:text-blue-600 transition">Text Message</span>
-                        </label>
-                        <label class="flex items-center gap-3 cursor-pointer group">
-                            <input type="radio" name="contact_preference" value="Phone Call" class="w-5 h-5 text-blue-600 border-slate-300 focus:ring-blue-500">
-                            <span class="text-slate-700 font-bold group-hover:text-blue-600 transition">Phone Call</span>
-                        </label>
-                    </div>
-                </div>
-
-                <div class="space-y-2">
-                    <label class="text-sm font-bold text-slate-700 ml-1">Property Address or Town</label>
-                    <input type="text" name="address" placeholder="e.g. Milk River, AB" required class="w-full p-4 bg-slate-50 rounded-2xl border-0 focus:ring-2 focus:ring-blue-500 transition">
-                </div>
-
-                <div class="space-y-2">
-                    <label class="text-sm font-bold text-slate-700 ml-1">Service Required</label>
-                    <select name="service" class="w-full p-4 bg-slate-50 rounded-2xl border-0 focus:ring-2 focus:ring-blue-500 transition cursor-pointer">
-                        <option>New Installation</option>
-                        <option>Smart Wi-Fi Upgrade</option>
-                        <option>Spring Start-up</option>
-                        <option>System Repair</option>
-                        <option>Fall Blow-out</option>
-                        <option>General Question / Other</option>
-                    </select>
-                </div>
-
-                <div class="space-y-2">
-                    <label class="text-sm font-bold text-slate-700 ml-1">Details or Questions</label>
-                    <textarea name="message" rows="4" placeholder="Tell us more about your yard or ask a question..." required class="w-full p-4 bg-slate-50 rounded-2xl border-0 focus:ring-2 focus:ring-blue-500 transition"></textarea>
-                </div>
-                
-                <button type="submit" id="submit-btn" class="w-full bg-blue-600 text-white font-extrabold py-5 rounded-2xl hover:bg-slate-900 transition-all shadow-xl text-lg mt-4">
-                    Submit Request
-                </button>
-            </form>
+    <div class="grid md:grid-cols-3 gap-6">
+        <div class="space-y-2">
+            <label class="text-sm font-bold text-slate-700 ml-1">Full Name</label>
+            <input type="text" name="name" required placeholder="John Doe" class="w-full p-4 bg-slate-50 rounded-2xl border-0 focus:ring-2 focus:ring-blue-500 transition">
         </div>
+        <div class="space-y-2">
+            <label class="text-sm font-bold text-slate-700 ml-1">Phone Number</label>
+            <input type="tel" name="phone" required placeholder="(403) 555-0123" class="w-full p-4 bg-slate-50 rounded-2xl border-0 focus:ring-2 focus:ring-blue-500 transition">
+        </div>
+        <div class="space-y-2">
+            <label class="text-sm font-bold text-slate-700 ml-1">Email Address</label>
+            <input type="email" name="email" required placeholder="name@email.com" class="w-full p-4 bg-slate-50 rounded-2xl border-0 focus:ring-2 focus:ring-blue-500 transition">
+        </div>
+    </div>
+
+    <div class="space-y-3 bg-blue-50/50 p-6 rounded-2xl border border-blue-100">
+        <label class="text-sm font-bold text-blue-900 block">How should we reach out?</label>
+        <div class="flex gap-8">
+            <label class="flex items-center gap-3 cursor-pointer group">
+                <input type="radio" name="contact_preference" value="Text Message" checked class="w-5 h-5 text-blue-600 border-slate-300 focus:ring-blue-500">
+                <span class="text-slate-700 font-bold group-hover:text-blue-600 transition">Text Message</span>
+            </label>
+            <label class="flex items-center gap-3 cursor-pointer group">
+                <input type="radio" name="contact_preference" value="Phone Call" class="w-5 h-5 text-blue-600 border-slate-300 focus:ring-blue-500">
+                <span class="text-slate-700 font-bold group-hover:text-blue-600 transition">Phone Call</span>
+            </label>
+        </div>
+    </div>
+
+    <div class="space-y-2">
+        <label class="text-sm font-bold text-slate-700 ml-1">Property Address or Town</label>
+        <input type="text" name="address" placeholder="e.g. Milk River, AB" required class="w-full p-4 bg-slate-50 rounded-2xl border-0 focus:ring-2 focus:ring-blue-500 transition">
+    </div>
+
+    <div class="space-y-2">
+        <label class="text-sm font-bold text-slate-700 ml-1">Service Required</label>
+        <select name="service" class="w-full p-4 bg-slate-50 rounded-2xl border-0 focus:ring-2 focus:ring-blue-500 transition cursor-pointer">
+            <option>New Installation</option>
+            <option>Smart Wi-Fi Upgrade</option>
+            <option>Spring Start-up</option>
+            <option>System Repair</option>
+            <option>Fall Blow-out</option>
+            <option>General Question / Other</option>
+        </select>
+    </div>
+
+    <div class="space-y-2">
+        <label class="text-sm font-bold text-slate-700 ml-1">Details or Questions</label>
+        <textarea name="message" rows="4" placeholder="Tell us more about your yard or ask a question..." required class="w-full p-4 bg-slate-50 rounded-2xl border-0 focus:ring-2 focus:ring-blue-500 transition"></textarea>
+    </div>
+    
+    <button type="submit" id="submit-btn" class="w-full bg-blue-600 text-white font-extrabold py-5 rounded-2xl hover:bg-slate-900 transition-all shadow-xl text-lg mt-4">
+        Submit Request
+    </button>
+</form>
     </section>
 
     <footer class="py-12 text-center text-slate-400 text-sm">
