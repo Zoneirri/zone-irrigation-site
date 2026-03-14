@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Privacy Policy | ZONE Irrigation</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;700&display=swap');
+        body { font-family: 'Plus Jakarta Sans', sans-serif; }
+    </style>
+</head>
+<body class="bg-slate-50 text-slate-900 py-12 px-6">
+    <div class="max-w-3xl mx-auto bg-white p-8 shadow-sm border border-slate-200 rounded-xl text-sm leading-relaxed">
+        <h1 class="text-2xl font-extrabold mb-6 text-slate-900">Privacy Policy</h1>
+        <p class="mb-4 italic text-slate-500">Last Updated: March 14, 2026</p>
+
+        <section class="mb-6">
+            <h2 class="text-lg font-bold mb-2">1. Overview</h2>
+            <p>ZONE Irrigation ("we," "us," or "our") is committed to protecting the privacy of our clients in Milk River and Southern Alberta. This policy complies with Alberta’s Personal Information Protection Act (PIPA).</p>
+        </section>
+
+        <section class="mb-6">
+            <h2 class="text-lg font-bold mb-2">2. Information We Collect</h2>
+            <p>We collect personal information that you voluntarily provide through our "Request Info" form, including:</p>
+            <ul class="list-disc ml-6 mt-2">
+                <li>Name and contact information (email, phone number).</li>
+                <li>Service address for irrigation quotes.</li>
+                <li>Information provided in your service request.</li>
+            </ul>
+        </section>
+
+        <section class="mb-6">
+            <h2 class="text-lg font-bold mb-2">3. Meta Advertising & Pixel</h2>
+            <p>We use the Meta Pixel on this website to measure ad performance and show relevant ads to local homeowners. Meta may collect or receive information from our website to provide measurement services and target ads.</p>
+        </section>
+
+        <section class="mb-6">
+            <h2 class="text-lg font-bold mb-2">4. How We Use Your Data</h2>
+            <p>We use your information solely to provide irrigation quotes, schedule services, and communicate about your projects. We do **not** sell or share your personal data with third-party marketers.</p>
+        </section>
+
+        <section class="mb-6">
+            <h2 class="text-lg font-bold mb-2">5. Contact Us</h2>
+            <p>For questions about your data, contact Donald Cody at <strong>info@zoneirri.ca</strong>.</p>
+        </section>
+
+        <div class="mt-10 border-t pt-6">
+            <a href="/" class="text-blue-600 font-bold hover:underline">← Back to Home</a>
+        </div>
+    </div>
+</body>
+</html>
